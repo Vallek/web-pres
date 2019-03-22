@@ -47,6 +47,144 @@
 		.stage::before {
 			content: none !important;
 		}
+		.slide ul > li::before {
+			content: none;
+		}
+		.slide ul > .markup::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			transform: translateY(-15px);
+			display: block;
+			width: 100%;
+			height: 10px;
+			background-color: rgb(26, 192, 49);
+		}
+		.slide ul > .design::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: initial;
+			right: 0;
+			transform: translateY(-15px);
+			display: block;
+			width: 30%;
+			height: 10px;
+			background-color: rgb(26, 192, 49);
+		}
+		.slide ul > .js::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			transform: translateY(-15px);
+			display: block;
+			width: 30%;
+			height: 10px;
+			background-color: rgb(26, 192, 49);
+		}
+		.slide ul > .task::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			transform: translateY(-15px);
+			display: block;
+			width: 30%;
+			height: 10px;
+			background-color: rgb(26, 192, 49);
+		}
+		.slide ul > .text::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			transform: translateY(-15px);
+			display: block;
+			width: 30%;
+			height: 10px;
+			background-color: rgb(26, 192, 49);
+		}
+		.slide ul > .cms::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 50%;
+			transform: translate(50%, -15px);
+			display: block;
+			width: 30%;
+			height: 10px;
+			background-color: rgb(26, 192, 49);
+		}
+		.slide ul > .seo::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 50%;
+			transform: translate(50%, -15px);
+			display: block;
+			width: 15%;
+			height: 10px;
+			background-color: rgb(26, 192, 49);
+		}
+		.slide ul.clean > li::before {
+			content: none;
+		}
+		.prof-list {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-rows: repeat(4, 100px);
+			grid-template-areas:
+			"x z v q"
+			"a b c d"
+			"f g h i"
+			"k l m n";
+			/* justify-items: center; */
+			align-items: center;
+			grid-gap: 0 10%;
+		}
+		.prof-list li {
+			position: relative;
+			border-top: 5px solid grey;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 2;	
+		}
+		.task {
+			grid-area: f;
+		}
+		.design {
+			grid-area: g;
+		}
+		.markup {
+			grid-area: h;
+		}
+		.js {
+			grid-area: i;
+		}
+		.back {
+			grid-area: m;
+		}
+		.db {
+			grid-area: n;
+		}
+		.text {
+			grid-area: b;
+		}
+		.photo {
+			grid-area: c;
+		}
+		.market {
+			grid-area: z;
+		}
+		.seo {
+			grid-area: v;	
+		}
+		.prof-list .cms {
+			grid-area: m;
+		}
 		</style>
 </head>
 <body class="shower list">
@@ -56,6 +194,35 @@
 	<section class="slide" id="cover">
 		<h2>Планирование и организация работы</h2>
 		<p>Автор <a href="https://vallek.github.io/Portfolio/">Валерий Хаслер</a></p>
+	</section>
+	<section class="slide">
+		<h2>Профессии в вебе</h2>
+		<ul class="prof-list clean">
+			<li class="task next">Задача</li>
+			<li class="design next">Дизайн</li>
+			<li class="markup next">Верстка</li>
+			<li class="js next">JavaScript</li>
+			<li class="back next">Бэкэнд</li>
+			<li class="db next">База Данных</li>
+			<li class="text next">Текст</li>
+			<li class="photo next">Иллюстрации</li>
+			<li class="market next">Маркетинг</li>
+			<li class="seo next">SEO</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>На этом курсе</h2>
+		<ul class="prof-list">
+			<li class="task">Задача</li>
+			<li class="design">Дизайн</li>
+			<li class="markup">Верстка</li>
+			<li class="js">JavaScript</li>
+			<li class="cms">CMS</li>
+			<li class="text">Текст</li>
+			<li class="photo">Иллюстрации</li>
+			<li class="market">Маркетинг</li>
+			<li class="seo">SEO</li>
+		</ul>
 	</section>
 	<section class="slide">
 		<h2>Типы сайтов</h2>
