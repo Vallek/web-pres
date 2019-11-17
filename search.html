@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Поиск информации</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css">
+	<style>
+		.shower {
+				--slide-ratio: calc(16 / 9);
+			}
+		#cover {
+			text-align: center;
+		}
+		#cover h2 {
+			margin: 30px 0 0;
+			color: #fff;
+			text-align: center;
+			font-size: 70px;
+			display: inline;
+			background-color:#da575c;
+		}
+		#cover p {
+			margin: 10px 0 0;
+			text-align: center;
+			color: rgb(51,51,51);
+			font-style: italic;
+			font-size: 20px;
+			color: #fff;
+		}
+		#cover p a {
+			color: #da575c;
+		}
+		span {
+			padding-bottom: 3px;
+		}
+		.place {
+			text-align: center;
+		}
+		.slide {
+			background-repeat: no-repeat;
+		}
+		.slide .shout {
+			font-size: 80px;
+		}
+		.intro.cover {
+			transform: translate(-50%, -36%);
+		}
+		.slide-3 p {
+			display: inline;
+			background-color: #fff;
+			position: relative;
+			top: 50%;
+		}
+		.slide-3 h2 {
+			mix-blend-mode: difference;
+			color: white;
+		}
+		.slide-4 p.place.left {
+			width: 50%;
+			text-align: left;
+			margin-left: 100px;
+			transform: translate(0, -55%);
+		}
+		.slide-4 img.place.right {
+			width: 300px;
+			max-height: 50%;
+			margin-right: 100px;
+		}
+		.slide-5 img {
+			margin-bottom: 40px;
+		}
+		.down-img {
+			width: auto;
+			max-height: 250px;
+			margin-bottom: 40px;
+		}
+		.down-img.left {
+			margin-left: 100px;
+		}
+		.down-img.right {
+			margin-right: 100px;
+		}
+		.down-img.big {
+			max-height: 350px;
+		}
+		.slide-13 h2 {
+			position: absolute;
+			top: 29px;
+			right: -12px;
+			margin-right: 40px;
+			color:#000;
+			font-size: 39px;
+		}
+		.slide-17 {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-image: url('pictures/search/17.jpg');
+			background-size: cover;
+		}
+		.slide-17 > .wrap {
+			margin: 110px 0 0 75px;
+		}
+		.wiki {
+			background-image: url('pictures/search/wiki.png');
+			background-position: bottom;
+			background-size: 100% 100px;
+		}
+		.social {
+			background-image: url('pictures/search/social.jpg');
+			background-position: right;
+			background-size: 50%;
+		}
+		.social > h3:nth-of-type(2) {
+			margin-bottom: 0;
+		}
+		.habr {
+			background-image: url('pictures/search/habr.png');
+			background-position: center;
+			background-size: 50%;
+		}
+		.faq {
+			background-image: url('pictures/search/question.jpg');
+			background-position: right 50px center;
+			background-size: auto 300px;
+		}
+		.good {
+			background-image: url('pictures/search/class.jpg');
+			background-position: right 50px center;
+			background-size: auto 300px;
+		}
+		.specs {
+			background-image: url('pictures/search/specs.jpg');
+			background-position: center bottom 40px;
+			background-size: auto 300px;
+		}
+		.expert {
+			background-image: url('pictures/search/expert.jpg');
+			background-position: right bottom;
+			background-size: auto 150px;
+		}
+		.fast {
+			background-image: url('pictures/search/speed.png');
+			background-size: cover;
+			background-position: initial;
+		}
+		.fast h2 {
+			text-align: right;
+			color: #fff;
+			position: absolute;
+			right: 40px;
+		}
+		.dashed-line {
+			width: 235px;
+			height: 1px;
+			border-top: 5px dashed rgb(238, 60, 60);
+			transform: rotate(45deg);
+			position: absolute;
+			left: 23%;
+			bottom: 62%;
+		}
+		.attribution {
+			line-height: 1.5;
+			font-size: 16px;
+		}
+		strong {
+			color: #da575c;
+		}
+		em {
+			color: #fa8e33;
+		}
+		.web2 {
+			background-image: url('pictures/search/web2.jpg');
+			background-position: center;
+			background-size: cover;
+		}
+		.web2 h2 {
+			color: #fff;
+			background-color: #f499ff;
+		}
+		.methods {
+			background-image: url('pictures/search/methods.jpg');
+			background-repeat: repeat;
+			background-size: contain;
+		}
+		.methods > h2 {
+			color: white;
+			background-color: #af3738;
+		}
+		.sugg {
+			background-image: url('pictures/search/sugg.png');
+			background-position: center bottom 40px;
+			background-size: auto 250px;
+		}
+		.search {
+			background-image: url('pictures/search/english.jpg');
+			background-position: center bottom 40px;
+			background-size: auto 250px;
+		}
+		.aim > h2 {
+			font-size: 49px;
+		}
+		.aim .place {
+			top: 60%;
+		}
+		.finish {
+			background-image: url('pictures/search/finish.jpg');
+			background-position: center;
+			background-size: cover;
+		}
+		.finish h2 {
+			color: #fff;
+			margin-left: 30px;
+		}
+		.finish > .shout {
+			color: #fff;
+			font-weight: bold;
+			background-color:#8b4e6f;
+			top: 42%;
+		}
+		.gone {
+			background-image: url('pictures/search/gone.jpg');
+			background-position: center bottom 40px;
+			background-size: auto 250px;
+		}
+		</style>
+</head>
+<body class="shower list">
+	<header class="caption">
+		<h1>Почему важно уметь искать информацию</h1>	
+	</header>
+	<section class="slide" id="cover">
+		<h2>Почему важно уметь искать информацию</h2>
+		<p>Автор <a href="https://vallek.github.io/Portfolio/">Валерий Хаслер</a></p>
+		<img src="pictures/search/intro.jpg" alt="" class="cover intro">
+	</section>
+	<section class="slide">
+		<h2>Содержание</h2>
+		<ol>
+			<li>Почему важно уметь искать информацию</li>
+			<li>Где стоит и не стоит искать информацию</li>
+			<li>Методы поиска информации</li>
+			<li>Как экономить время</li>
+		</ol>
+	</section>
+	<section class="slide slide-3">
+		<h2>&#167;1 Почему важно искать информацию</h2>
+		<p>Обмен информацией - основа Интернета. А обмен знаниями - основа образования. Но без самостоятельного поиска информации не может быть качественного обучения. Почему?</p>
+		<img src="pictures/search/3.jpg" alt="" class="cover place bottom right">
+	</section>
+	<section class="slide slide-4">
+		<h2>Первая причина</h2>
+		<p class="place left">Информации <strong>слишком много</strong>.<br> Невозможно собрать в одном месте или голове всю информацию о какой-либо специальности.</p>
+		<img class="place right" src="pictures/search/4.jpg" alt="">
+	</section>
+	<section class="slide slide-5">
+		<h2>Вторая причина</h2>
+		<p>Все <strong>люди разные</strong>.<br> В веб-разработке всегда есть место разным точкам зрения, подходам, взглядам вкусам и т.п.</p>
+		<img class="place bottom" src="pictures/search/5.jpg" alt="">
+	</section>
+	<section class="slide">
+		<h2>Гуглить не стыдно, стыдно не гуглить:)</h2>
+		<p>Поэтому нет ничего зазорного в том, чтобы гуглить ответы на вопросы. Более того это абсолютно необходимо для любого хорошего специалиста. </p>
+		<img class="place bottom down-img" src="pictures/search/6.jpg" alt="">
+	</section>
+	<section class="slide">
+		<h2>Почему <em>важно</em> уметь искать информацию <em>эффективно</em></h2>
+		<p>Но просто искать информацию недостаточно. Как и в любом другом деле это можно делать эффективнее. Почему это важно?</p>
+		<img class="place bottom down-img" src="pictures/search/7.jpg" alt="">
+	</section>
+	<section class="slide">
+		<h2>+ к знаниям</h2>
+		<p>Качественный поиск - как фильтр. Он позволяет узнавать больше полезного и меньше ненужного.</p>
+		<img class="place bottom down-img" src="pictures/search/8.jpg" alt="">
+	</section>
+	<section class="slide"> 
+		<h2>+ к конкурентоспособности</h2>
+		<p>Быстрый поиск решения задачи поможет выделить себя на фоне множества других и на тестовом задании и на работе.</p>
+		<img class="place bottom down-img" src="pictures/search/9.jpg" alt="">
+	</section>
+	<section class="slide">
+		<h2>+ ко времени</h2>
+		<p>Чем быстрее вы ищите нужную информацию, тем больше вы экономите самый ценный ресурс – время.</p>
+		<img class="place left bottom down-img" src="pictures/search/10.jpg" alt="">
+		<img class="place bottom down-img" src="pictures/search/10.jpg" alt="">
+		<img class="place right bottom down-img" src="pictures/search/10.jpg" alt="">
+	</section>
+	<section class="slide">
+		<h2>+ к кругозору</h2>
+		<p>Вы узнаете самые разные точки зрения на решение одних проблем.</p>
+		<img class="place bottom down-img" src="pictures/search/11.jpg" alt="">
+	</section>
+	<section class="slide">
+		<h2>Относитесь ко всему критически</h2>
+		<p>Критически — не значит никому не верить. Это значит проверяйте всё на практике. Берите то, что работает для вас. Остальное отбрасывайте. </p>
+		<img class="place bottom down-img" src="pictures/search/12.jpg" alt="">
+	</section>
+	<section class="slide slide-13">
+		<h2 class="">&#167;2 Где стоит и не стоит искать информацию</h2>
+		<img class="cover" src="pictures/search/13.jpg" alt="">
+	</section>
+	<section class="slide">
+		<h2>Первый не значит лучший</h2>
+		<p>Сайты могут пробиться в первые результаты выдачи за счет не всегда честного SEO или своего возраста.</p>
+		<img class="place bottom down-img" src="pictures/search/14.jpg" alt="">
+	</section>
+	<section class="slide">
+		<h2>Что значит устаревшие сайты?</h2>
+		<p>В вебе все очень быстро меняется. До 2014 - скорее всего устаревшее. Пару лет - проверять в других источниках.</p>
+		<img class="place bottom down-img" src="pictures/search/15.jpg" alt="">
+	</section>
+	<section class="slide slide-16">
+		<h2>Надежные и ненадежные сайты</h2>
+		<p>Это очень условное разделение. Некоторые сайты могут попасть в разные категории. С одной стороны это субъективное мнение автора, но с другой оно основано на конкретных наблюдениях и далеко не уникально.</p>
+	</section>
+	<section class="slide slide-17">
+		<div class="wrap">
+			<h2>Ненадежные</h2>
+			<ul>
+				<li><a href="http://htmlbook.ru/html/ul/">htmlbook</a></li>
+				<li><a href="https://www.w3schools.com/html/html_blocks.asp">w3schools</a></li>
+				<li><a href="https://webref.ru">webref</a></li>
+				<li><a href="https://toster.ru/q/556616">qaru.site</a></li>
+				<li><a href="https://otvet.mail.ru/question/40410368">Ответы mail.ru</a></li>
+			</ul>
+		</div>
+	</section>
+	<section class="slide web2">
+		<h2>Разная надежность</h2>
+	</section>
+	<section class="slide wiki">
+		<h2>Википедия</h2>
+		<p>Хороша для поиска знаний, в которых особо нет места мнениям.</p>
+		<ul>
+			<li><a href="https://en.wikipedia.org/wiki/">Сравнение браузерный движков</a></li>
+			<li><a href="https://ru.wikipedia.org/wiki/DNS">DNS</a></li>
+			<li><a href="https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%BE%D0%BA%D1%81%D0%B8-%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80">Прокси серверы</a></li>
+			<li><a href="https://en.wikipedia.org/wiki/RGB_color_model">Цветовая модель RGB</a></li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>Авторские блоги и сайты</h2>
+		<p>Содержимое очень сильно зависит от автора.</p>
+		<ul>
+			<li><a href="https://gedd.ski/post/the-difference-between-width-and-flex-basis/">geddski про разницу между width и flex-basis</a></li>
+			<li><a href="https://alistapart.com/article/fixing-variable-scope-issues-with-ecmascript-6/">List Apart про область видимости в JS</a></li>
+		</ul>
+	</section>
+	<section class="slide social">
+		<h2>Соц сети</h2>
+		<h3>Твиттер</h3>
+		<h3>Вконтакте</h3>
+		<ul>
+			<li><a href="https://vk.com/forwebdev">forwebdev</a></li>
+			<li><a href="https://vk.com/love_frontend">love_frontend</a></li>
+		</ul>
+		<h3>dev.to</h3>
+	</section>
+	<section class="slide habr">
+		<h2>Хабр</h2>
+		<ul>
+			<li><a href="https://habr.com/ru/hub/css/">CSS</a></li>
+			<li><a href="https://habr.com/ru/hub/javascript/">JS</a></li>
+			<li><a href="https://habr.com/ru/hub/webdev/">webdev</a></li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>medium.com</h2>
+		<ul>
+			<li><a href="https://www.freecodecamp.org/news/an-animated-guide-to-flexbox-d280cf6afc35/">Флексбокс в гифках</a></li>
+			<li><a href="https://www.freecodecamp.org/news/understanding-flexbox-everything-you-need-to-know-b4013d4dc9af/">Большой гайд по флексу</a></li>
+			<li><a href="https://www.freecodecamp.org/news/how-to-make-your-html-responsive-by-adding-a-single-line-of-css-2a62de81e431/">Быстрый гайд по адаптивным гридам</a></li>
+		</ul>
+		<ul>
+			<li><a href="https://designpub.ru/">Дизайн собака</a></li>
+			<li><a href="https://medium.com/webbdev">webbdev</a></li>
+			<li><a href="https://medium.com/codyhouse">codyhouse</a></li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>Дайджесты и подборки материалов</h2>
+		<ul>
+			<li><a href="https://habr.com/ru/users/alexzfort/posts/">Дайджест от Alexzfort</a></li>
+			<li><a href="https://bespoyasov.ru/front-not-pain/">Фронтенд — это не больно!</a></li>
+		</ul>
+	</section>
+	<section class="slide faq">
+		<h2>Вопросы и ответы</h2>
+		<h3><a href="https://stackoverflow.com/">stackoverflow</a></h3>
+		<ul>
+			<li><a href="https://stackoverflow.com/questions/651038/how-do-you-clone-a-git-repository-into-a-specific-folder">Как клонировать репу в определенную папку</a></li>
+			<li><a href="https://stackoverflow.com/questions/41033245/does-position-absolute-conflict-with-flexbox">Конфликтуют ли абсолютное позиционирование и флексбокс</a></li>
+			<li><a href="https://stackoverflow.com/questions/43340690/is-there-an-online-emulating-screen-reader-tool-to-test-against-a-custom-web-pag">Список скринридеров</a></li>
+		</ul>
+		<p>На эти сайты вы часто можете попасть из поисковой выдачи.</p>
+	</section>
+	<section class="slide faq">
+		<h2>Вопросы и ответы</h2>
+		<h3><a href="https://toster.ru/">тостер</a></h3>
+		<h3>quora.com</h3>
+		<p>На эти сайты вы часто можете попасть из поисковой выдачи.</p>
+	</section>
+	<section class="slide good">
+		<h2>Надежные</h2>
+		<ul>
+			<li><a href="https://html5book.ru/">html5book.ru</a></li>
+			<li><a href="https://css-live.ru/">css-live.ru</a></li>
+			<li><a href="https://javascript.info/">javascript.info</a></li>
+			<li><a href="https://css-tricks.com/">css-tricks.com</a></li>
+			<li><a href="https://smashingmagazine.com/">smashingmagazine.com</a></li>
+		</ul>
+	</section>
+	<section class="slide good">
+		<h2>Надежные</h2>
+		<ul>
+			<li><a href="https://developers.google.com/">developers.google.com</a></li>
+			<li><a href="https://web.dev/">web.dev</a></li>
+			<li><a href="https://developer.mozilla.org/">MDN</a></li>
+			<li><a href="https://smashingmagazine.com/">smashingmagazine.com</a></li>
+		</ul>
+	</section>
+	<section class="slide specs">
+		<h2>Спецификации</h2>
+		<ul>
+			<li><a href="https://html.spec.whatwg.org/multipage/">HTML</a></li>
+			<li><a href="https://www.w3.org/TR/CSS/">CSS</a></li>
+		</ul>
+		<div class="dashed-line"></div>
+	</section>
+	<section class="slide">
+		<h2>Когда этих ссылок не хватает</h2>
+		<p>Задавайте вопросы сами!</p>
+		<p>Не бойтесь задать сами вопрос на одном из созданных для этого сайтов или у коллег. Если вы хотите получить ответ на свой вопрос, то стоит его формулировать так, чтобы избежать недопонимания. Учитесь формулировать вопрос максимально конкретно и четко. Помните, что люди не умеют читать мысли:)</p>
+	</section>
+	<sectopn class="slide methods">
+		<h2>&#167;3 Методы поиска информации</h2>
+	</sectopn>
+	<section class="slide sugg">
+		<h2>Ищите то, что могли бы написать реальные люди</h2>
+		<p>Если вы хотите найти текст написанный реальными людьми, стоит подумать как именно они могли его сформулировать.</p>
+	</section>
+	<section class="slide search">
+		<h2>Английский язык</h2>
+		<p>Больше материалов и больше актуальных. Но во фронтенде некоторые темы больше представлены по-русски (БЭМ, российские компании).</p>
+	</section>
+	<section class="slide aim">
+		<h2>Чем точнее запрос, тем меньше результатов. Но тем проще в них разобраться</h2>
+		<img class="place center" src="pictures/search/aim.gif" alt="">
+	</section>
+	<section class="slide expert">
+		<h2>Способность отличить нормальный источник от сомнительного приходит только с опытом </h2>
+		На что стоит обращать внимание:
+		<ul>
+			<li>Даты публикаций</li>
+			<li>Устаревший дизайн</li>
+			<li>Слишком много эмоций и оценочных суждений</li>
+			<li>Противоречит надежным/многим другим источникам</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>Ищите среди всех подходящих форматов </h2>
+		<ul>
+			<li>Текст</li>
+			<li class="next">Изображения</li>
+			<li class="next">Видео (доклады с конференций)
+				<ul>
+					<li><a href="https://www.youtube.com/channel/UCGQRn0aTnJK-zHFAdT9Nm1A">Fontend Channel</a></li>
+					<li><a href="https://www.youtube.com/channel/UCMtlICYxr6Dz_PG9_SVqRYQ/">Академия Яндекс - Фронтенд</a></li>
+					<li><a href="https://www.youtube.com/channel/UC2Jwo4Q0s-ucjGseHP8XUSQ/">HolyJS</a></li>
+				</ul>
+			</li>
+			<li class="next">Аудио (подкасты)</li>
+		</ul>
+	</section>
+	<section class="slide fast">
+		<h2>&#167;4<br> Как<br> экономить<br> время</h2>
+	</section>
+	<section class="slide">
+		<h2>Поисковые движки и поиск по сайту</h2>
+		<p>Вы можете добавить в браузер поисковые движки, чтобы сэкономить еще больше времени. Это работает не только для поисковиков, но и для разных сайтов, где есть поиск. Например, такие как mdn, википедия, викисловарь, гугл переводчик.</p>
+	</section>
+	<section class="slide">
+		<h2>Поиск по сайту через гугл</h2>
+		<p>Поиск по сайту через гугл "запрос site:адрес сайта". Например "font-style site:https://en.bem.info". Но он будет искать слова отдельно. Чтобы он искал слова вместе воспользуйтесь одним из базовых приемов - оберните слова в кавычки "font-style".</p>
+	</section>
+	<section class="slide">
+		<h2>Фичи поисковиков</h2>
+		<p>В поисковиках можно использовать операторы - специальные символы, уточняющие запрос. Основные гугл операторы можно найти в <a href="https://support.google.com/websearch/answer/2466433?hl=ru">официальной документации</a>.</p>
+		<p>Кроме перечисленных там есть и другие. Например, знак "*" можно использовать как "wild card". То есть вместо звездочки может быть любое слово. Так, запрос в кавычках "мы * дом" может выдать "мы купили дом" и "мы видим дом".</p>
+	</section>
+	<section class="slide gone">
+		<h2>Если это в вебе, то оно может пропасть</h2>
+		<ul>
+			<li><a href="http://webcache.googleusercontent.com/search?q=cache:">Гугл Кэш (после двоеточия нужно поставить адрес пропавшей страницы)</a></li>
+			<li><a href="https://web.archive.org/">Крупнейший веб архив</a></li>
+			<li><a href="http://archive.is/">Еще один архив, в котором страницы сохраняют вручную</a></li>
+		</ul>
+	</section>
+	<section class="slide finish">
+		<h2>Конец!</h2>
+		<p class="shout">Самое время задать вопросы</p>
+	</section>
+	<section class="slide">
+		<h2>В презентации использованы иллюстрации</h2>
+		<ul class="attribution">
+			<li><a href="https://www.freepik.com/free-photos-vectors/technology">Technology vector created by freepik - www.freepik.com</a></li>
+			<li><a href="https://www.freepik.com/free-photos-vectors/business">Business vector created by pikisuperstar - www.freepik.com</a></li>
+			<li><a href="https://www.freepik.com/free-photos-vectors/party">Party vector created by freepik - www.freepik.com</a></li>
+			<li><a href="https://www.freepik.com/free-photos-vectors/man">Man vector created by dooder - www.freepik.com</a></li>
+			<li><a href="https://www.freepik.com/free-photos-vectors/background">Background vector created by rawpixel.com - www.freepik.com</a></li>
+			<li><a href="https://www.freepik.com/free-photos-vectors/people">People vector created by pikisuperstar - www.freepik.com</a></li>
+			<li><a href="https://www.freepik.com/free-photos-vectors/background">Background vector created by freepik - www.freepik.com</a></li>
+			<li><a href="https://www.freepik.com/free-photos-vectors/background">Background vector created by vectorpouch - www.freepik.com</a></li>
+			<li><a href="https://www.freepik.com/free-photos-vectors/gold">Gold vector created by vectorpocket - www.freepik.com</a></li>
+			<li><a href="https://www.freepik.com/free-photos-vectors/business">Business vector created by macrovector - www.freepik.com</a></li>
+			<li><a href="https://commons.wikimedia.org/wiki/Category:29_Janus_und_Bellona,_statue,_Great_Parterre,_Sch%C3%B6nbrunn#/media/File:N29_Janus_und_Bellona,_Sch%C3%B6nbrunn_(03).jpg">Обработанное фото с википедии</a> под лицензией <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></li>
+			<li>Картины Виктора Васнецова "Витязь на распутье" и "Кащей Бессмертный"</li>
+			<li>Кадры из аниме "Кулак Полярной звезды"</li>
+			<li>а также мемчики из интернета:)</li>
+		</ul>
+	</section>
+	<footer class="badge">
+		<a href="https://github.com/shower/shower">Fork me on GitHub</a>
+	</footer>
+	<div class="progress"></div>
+	<script src="shower/shower.min.js"></script>
+</body>
+</html>
