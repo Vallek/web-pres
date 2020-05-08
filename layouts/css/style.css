@@ -1,6 +1,7 @@
 body {
 	margin: 0;
 	height: 100%;
+	font-family: sans-serif;
 }
 
 html {
@@ -22,7 +23,7 @@ h1 {
 }
 
 .table-layout td {
-	/* border: 1px solid black; */
+	border: 2px solid rgb(77, 77, 77);
 }
 
 .logo {
@@ -93,7 +94,7 @@ h1 {
 }
 
 .ib-text {
-	font-size: 20px;
+	/* font-size: 20px; */
 }
 
 .main-ib {
