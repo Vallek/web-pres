@@ -125,9 +125,14 @@ h1 {
 }
 
 .flex-item {
+	font-size: 14px;
 	color: rgb(241, 241, 241);
 	width: 200px;
 	background-color: rgb(223, 71, 71);
+}
+
+.number {
+	font-size: 30px;
 }
 
 .flex-body {
