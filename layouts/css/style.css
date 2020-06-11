@@ -196,6 +196,7 @@ h1 {
 	grid-template-rows: 100px 500px 100px;
 	grid-gap: 10px;
 	background-color: rgb(240, 219, 126);
+	justify-content: safe center;
 }
 
 .grid-item {
