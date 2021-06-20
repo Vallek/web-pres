@@ -21,6 +21,7 @@ h1 {
 
 .text {
 	max-width: 600px;
+	padding-right: 300px;
 }
 
 .link-1::after {
