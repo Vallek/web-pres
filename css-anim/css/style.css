@@ -1,23 +1,26 @@
 body {
 	color: #fff;
+	font-size: 18px;
 	font-family: 'Open Sans', sans-serif;
 	background-color: rgb(218, 158, 86);
 }
 
 main {
 	position: relative;
-	max-width: 90%;
+	max-width: 80%;
 	margin: 0 auto;
 }
 
 h1 {
+	font-size: 60px;	
 	text-align: center;
-	max-width: 90%;
+	max-width: 80%;
 	margin: 0 auto;
+	margin-bottom: 100px;
 }
 
 .text {
-	max-width: 400px;
+	max-width: 600px;
 }
 
 .link-1::after {
