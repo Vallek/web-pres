@@ -135,6 +135,16 @@
 			background-position: center bottom 40px;
 			background-size: auto 300px;
 		}
+		.specs-aside {
+			text-align: left;
+			font-size: 18px;
+			max-width: 30ch;
+			top: 31%;
+			transform: translateY(-50%);
+		}
+		.specs-aside > a {
+			font-size: 18px;
+		}
 		.expert {
 			background-image: url('pictures/search/expert.jpg');
 			background-position: right bottom;
@@ -452,9 +462,12 @@
 	<section class="slide specs">
 		<h2>Спецификации</h2>
 		<ul>
-			<li><a href="https://html.spec.whatwg.org/multipage/">HTML</a> (<a href="https://youtu.be/7w9K34oL_LE">узнать, можно ли вложить один элемент в другой</a> и <a href="https://caninclude.glitch.me/">онлайн-инструмент</a>)</li>
+			<li><a href="https://html.spec.whatwg.org/multipage/">HTML</a></li>
 			<li><a href="https://www.w3.org/TR/CSS/">CSS</a></li>
 		</ul>
+		<aside class="place right specs-aside">
+			<a href="https://youtu.be/7w9K34oL_LE">узнать, можно ли вложить один элемент в другой</a> и<br> <a href="https://caninclude.glitch.me/">онлайн-инструмент</a>
+		</aside>
 		<div class="dashed-line"></div>
 	</section>
 	<section class="slide methods">
