@@ -6,7 +6,8 @@ button.addEventListener('click', fetchF);
 // Для использования Fetch API мы можем использовать асинхронную функцию
 async function fetchF() {
 	// Успешный запрос вернет объект Response, а неуспешный ошибку. await задает ожидание ответа от сервера
-	const response = await fetch('https://api.github.com/users/Vallek/followers');
+	const response = await fetch('https://github.com/Vallek/');
+	console.error(response);
 	// Если ответ успешен, то 
 	if (response.ok) {
 		// берем json данные из объекта
