@@ -5,7 +5,7 @@ button.addEventListener('click', fetchF);
 
 // Для работы Fetch API мы используем асинхронную функцию
 async function fetchF() {
-	// Успешный запрос вернет объект Response, а неуспешный ошибку. await необходим ожидание ответа от сервера
+	// Успешный запрос вернет объект Response, а неуспешный ошибку. await необходим для ожидание ответа от сервера
 	const response = await fetch('https://api.github.com/users/Vallek/followers');
 	// Если ответ успешен, то 
 	if (response.ok) {
