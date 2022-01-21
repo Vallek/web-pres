@@ -3,9 +3,9 @@ const area = document.querySelector('.area');
 
 button.addEventListener('click', fetchF);
 
-// Для использования Fetch API мы можем использовать асинхронную функцию
+// Для работы Fetch API мы используем асинхронную функцию
 async function fetchF() {
-	// Успешный запрос вернет объект Response, а неуспешный ошибку. await задает ожидание ответа от сервера
+	// Успешный запрос вернет объект Response, а неуспешный ошибку. await необходим ожидание ответа от сервера
 	const response = await fetch('https://api.github.com/users/Vallek/followers');
 	// Если ответ успешен, то 
 	if (response.ok) {
