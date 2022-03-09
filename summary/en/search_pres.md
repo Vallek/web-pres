@@ -2,12 +2,12 @@
 
 ## Contents
 
-1. Why it is important know how to search for information
+1. Why it is important to know how to search for information
 2. What sites you can trust and what sites you shouldn't
 3. Information search methods
 4. Additional tips
 
-## Why it is important know how to search for information
+## Why it is important to know how to search for information
 
 In my teaching practice, I often meet students (and not only students:) who underestimate the importance of searching for information. Some even consider it something shameful, like a real specialist should keep everything in his head. Someone thinks that all the necessary knowledge and answers to questions should be collected in one place. I hope I can explain to you why this is not the case.
 
@@ -39,7 +39,7 @@ But just looking for information is not enough. Like any other professional skil
 
 Not only is there too much information and it is constantly changing. In addition, not all information is equally useful :) There is a lot of outdated or incorrect information on the web. The skill of searching for information can work like a filter. At first it will be loose and you will let a lot of unnecessary stuff. This is normal and it is better to prepare yourself for it in advance. But if you will search, learn new things and practice, this filter will become more accurate. Then you will be able to weed out the unnecessary info and take only the useful.
 
-#### + to competitiveness
+#### + to competitive
 
 When applying for a job, the skill of searching for information will help you complete test tasks on time and better than others. But in real work you will also have 100 questions a day. Some you will be able to ask your senior comrades or the teacher during courses. But for the most part, you'll have to find it yourself. And in the future less experienced colleagues will ask you something.
 
@@ -51,9 +51,9 @@ The faster you search for the information you need, the more you saving our most
 
 It is always more efficient to look at the solution of a problem from different points of view. Thousands of specialists will find problems and ways to solve them much faster then one. At the same time there are enough not most useful advices out there. The search skill will help you find what will help you in your task.
 
-### Be critical
+### Always be critical
 
-Be critical of any information. Including this one :) Critical - does not mean not to trust anyone. This means test everything in practice. The best thing to do with new information is to open the code editor and try to reproduce the solution.
+Be critical of any information. Including this one :) Critical - does not mean not to trust anyone. It means test everything in practice. The best thing to do with new information is to open the code editor and try to reproduce the solution.
 
 If you tested everything and it worked out well - great :) If not, then maybe you made a mistake. And this is normal and even useful while you are learning. 
 
@@ -61,7 +61,7 @@ But maybe something was wrong with the source. Therefore, in addition to practic
 
 ## What sites you can trust and what sites you shouldn't
 
-### First doesn't mean best
+### The first doesn't mean the best
 
 If something is in the first results of a search engine, it does not mean that it is the best source. Often, sites can break into the first results due to SEO (not always honest) or due to their age. Therefore, in the first lines there may be unreliable and whether outdated sites.
 
@@ -132,7 +132,7 @@ The modern social network for web developers.
 
 ##### [Reddit](https://www.reddit.com/)
 
-The most popular collective blog on web. On all topics that you can and cannot imagine. Mostly consists of links, shorts post< questions and discussions. Sometimes in the comments you can find more useful information that in post itself:)
+The most popular collective blog on web. On all topics that you can and cannot imagine. Mostly consists of links, shorts posts questions and discussions. Sometimes in the comments you can find more useful information that in post itself:)
 
 Examples of hubs on the frontend:
 * [Subreddit about frontend](https://www.reddit.com/r/Frontend)
@@ -148,7 +148,7 @@ Popular collective blog. Less social than reddit. Lots of good articles about la
 Medium Communities examples:
 * [Bits and Pieces](https://blog.bitsrc.io/)
 * [levelup](https://levelup.gitconnected.com/)
-* [Javascript](https://medium.com/javascript-in-plain-english)
+* [JavaScript](https://medium.com/javascript-in-plain-english)
 
 freecodecamp posts example:
 * [Flexbox GIFs](https://www.freecodecamp.org/news/an-animated-guide-to-flexbox-d280cf6afc35/)
@@ -160,7 +160,7 @@ freecodecamp posts example:
 * [frontendfront](https://frontendfront.com/)
 * [frontendweekly](https://frontendweekly.co/)
 
-##### Questions and answers
+##### Questions and Answers
 
 [stackoverflow](https://stackoverflow.com/) is the most popular QnA site for devs.
 
