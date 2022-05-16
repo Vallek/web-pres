@@ -173,7 +173,8 @@ Html5css.ru, quaru.site (сейчас закрыт), coderoad.ru и многие
 
 ##### Дайджесты и подборки материалов
 
-* [Дайджест от Alexzfort](https://habr.com/ru/users/alexzfort/posts/)
+* [Новости фронтенда](https://habr.com/ru/users/nikolayshabalin/posts/)
+* [Дайджест на английском](https://frontendfoc.us/latest)
 * [Фронтенд — это не больно!](https://bespoyasov.ru/front-not-pain/)
 
 ##### Вопросы и ответы 
