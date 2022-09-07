@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Поиск информации</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../shower/themes/ribbon/styles/styles.css">
+	<style>
+		.shower {
+			--slide-ratio: calc(16 / 9);
+			}
+		#cover {
+			text-align: center;
+		}
+		#cover h2 {
+			margin: 30px 0 0;
+			color: #fff;
+			text-align: center;
+			font-size: 70px;
+			display: inline;
+			background-color:#da575c;
+		}
+		#cover p {
+			margin: 10px 0 0;
+			text-align: center;
+			color: rgb(51,51,51);
+			font-style: italic;
+			font-size: 20px;
+			color: #fff;
+		}
+		#cover p a {
+			color: #da575c;
+		}
+		span {
+			padding-bottom: 3px;
+		}
+		.place {
+			text-align: center;
+		}
+		.slide {
+			background-repeat: no-repeat;
+		}
+		.slide .shout {
+			font-size: 80px;
+		}
+		.intro.cover {
+			transform: translate(-50%, -36%);
+		}
+		.slide-3 p {
+			display: inline;
+			background-color: #fff;
+			position: relative;
+			top: 145px;
+		}
+		.slide-3 h2 {
+			mix-blend-mode: difference;
+			color: white;
+		}
+		.slide-4 p.place.left {
+			width: 50%;
+			text-align: left;
+			margin-left: 100px;
+			transform: translate(0, -55%);
+		}
+		.slide-4 img.place.right {
+			width: 300px;
+			max-height: 50%;
+			margin-right: 100px;
+		}
+		.slide-5 img {
+			margin-bottom: 40px;
+		}
+		.down-img {
+			width: auto;
+			max-height: 250px;
+			margin-bottom: 40px;
+		}
+		.down-img.left {
+			margin-left: 100px;
+		}
+		.down-img.right {
+			margin-right: 100px;
+		}
+		.down-img.big {
+			max-height: 350px;
+		}
+		.slide-13 h2 {
+			position: absolute;
+			top: 29px;
+			right: -12px;
+			margin-right: 40px;
+			color:#000;
+			font-size: 39px;
+		}
+		.slide-17 {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-image: url('../pictures/search/17.jpg');
+			background-size: cover;
+		}
+		.slide-17 > .wrap {
+			margin: 110px 0 0 75px;
+		}
+		.wiki {
+			background-image: url('../pictures/search/wiki.png');
+			background-position: bottom;
+			background-size: 100% 100px;
+		}
+		.social {
+			background-image: url('../pictures/search/social.jpg');
+			background-position: right;
+			background-size: 50%;
+		}
+		.social > h3:nth-of-type(2) {
+			margin-bottom: 0;
+		}
+		.habr {
+			background-image: url('../pictures/search/habr.png');
+			background-position: center;
+			background-size: 50%;
+		}
+		.faq {
+			background-image: url('../pictures/search/question.jpg');
+			background-position: right 50px center;
+			background-size: auto 300px;
+		}
+		.good {
+			background-image: url('../pictures/search/class.jpg');
+			background-position: right 50px center;
+			background-size: auto 300px;
+		}
+		.specs {
+			background-image: url('../pictures/search/specs.jpg');
+			background-position: center bottom 40px;
+			background-size: auto 300px;
+		}
+		.specs-aside {
+			text-align: left;
+			font-size: 18px;
+			max-width: 30ch;
+			top: 31%;
+			transform: translateY(-50%);
+		}
+		.specs-aside > a {
+			font-size: 18px;
+		}
+		.expert {
+			background-image: url('../pictures/search/expert.jpg');
+			background-position: right bottom;
+			background-size: auto 150px;
+		}
+		.fast {
+			background-image: url('../pictures/search/speed.png');
+			background-size: cover;
+			background-position: initial;
+		}
+		.fast h2 {
+			text-align: right;
+			color: #fff;
+			position: absolute;
+			right: 40px;
+		}
+		.dashed-line {
+			width: 235px;
+			height: 1px;
+			border-top: 5px dashed rgb(238, 60, 60);
+			transform: rotate(45deg);
+			position: absolute;
+			left: 23%;
+			bottom: 62%;
+		}
+		.attribution {
+			line-height: 1.5;
+			font-size: 16px;
+		}
+		strong {
+			color: #da575c;
+		}
+		em {
+			color: #fa8e33;
+		}
+		.web2 {
+			background-image: url('../pictures/search/web2.jpg');
+			background-position: center;
+			background-size: cover;
+		}
+		.web2 h2 {
+			color: #fff;
+			background-color: #f499ff;
+		}
+		.methods {
+			background-image: url('../pictures/search/methods.jpg');
+			background-repeat: repeat;
+			background-size: contain;
+		}
+		.methods > h2 {
+			color: white;
+			background-color: #af3738;
+		}
+		.sugg {
+			background-image: url('../pictures/search/sugg.png');
+			background-position: center bottom 40px;
+			background-size: auto 250px;
+		}
+		.search {
+			background-image: url('../pictures/search/english.jpg');
+			background-position: center bottom 40px;
+			background-size: auto 250px;
+		}
+		.aim > h2 {
+			font-size: 49px;
+		}
+		.aim .place {
+			top: 60%;
+		}
+		.finish {
+			background-image: url('../pictures/search/finish.jpg');
+			background-position: center;
+			background-size: cover;
+		}
+		.finish h2 {
+			color: #fff;
+			margin-left: 30px;
+		}
+		.finish > .shout {
+			color: #fff;
+			font-weight: bold;
+			background-color:#8b4e6f;
+			top: 42%;
+		}
+		.finish > h3,
+		.finish > p:not(.shout) {
+			color: white;
+			padding: 0 1em;
+			background-color: #8b4e6f;
+		}
+		.gone {
+			background-image: url('../pictures/search/gone.jpg');
+			background-position: center bottom 40px;
+			background-size: auto 250px;
+		}
+		</style>
+</head>
+<body class="shower list">
+	<header class="caption">
+		<h1>How to efficiently search for information</h1>	
+	</header>
+	<section class="slide" id="cover">
+		<h2>How to efficiently search for information</h2>
+		<p>by <a href="https://vallek.github.io/Portfolio/">Vallek</a></p>
+		<img src="../pictures/search/intro.jpg" alt="" class="cover intro">
+	</section>
+	<section class="slide">
+		<h2>Contents</h2>
+		<ol>
+			<li>Why it is important to know how to search for information</li>
+			<li class="next">What sites you can trust and what sites you shouldn't</li>
+			<li class="next">Information search methods</li>
+			<li class="next">Additional tips</li>
+		</ol>
+	</section>
+	<section class="slide slide-3">
+		<h2>&#167;1 Why it is important to know how to search for information</h2>
+		<p>The exchange and search for information is the basis of the Internet. It is impossible to imagine working in IT without it. This is also true for education.<br> And without searching for information on your own, there is no quality education. Why? </p>
+		<img src="../pictures/search/3.jpg" alt="" class="cover place bottom right">
+	</section>
+	<section class="slide slide-4">
+		<h2>First reason</h2>
+		<p class="place left">There is <strong>too much information</strong> and it's <strong>constantly updating</strong>.<br> It is impossible to collect in one place or one head all the information about any profession.</p>
+		<img class="place right" src="../pictures/search/4.jpg" alt="">
+	</section>
+	<section class="slide slide-5">
+		<h2>Second reason</h2>
+		<p>Everyone are <strong>different</strong>.<br> In web development, there is always a room for different approaches and ways of solving problems.</p>
+		<img class="place bottom down-img" src="../pictures/search/5.jpg" alt="">
+	</section>
+	<section class="slide">
+		<h2>There's no shame in googling, only in not googling :)</h2>
+		<p>There is nothing wrong with googling answers to questions. Moreover, it is absolutely necessary for any good specialist.</p>
+		<img class="place bottom down-img" src="../pictures/search/6.jpg" alt="">
+	</section>
+	<section class="slide">
+		<h2>Why it's important to search for information <em>effectively</em></h2>
+		<p>Like any other professional skill, this one can be leveled up. Why is it important?</p>
+		<img class="place bottom down-img" src="../pictures/search/7.jpg" alt="">
+	</section>
+	<section class="slide">
+		<h2>+ to knowledge</h2>
+		<p>not all information is equally useful :) Quality search skill is like a filter. It helps to weed out unwanted bad info.</p>
+		<img class="place bottom down-img" src="../pictures/search/8.jpg" alt="">
+	</section>
+	<section class="slide"> 
+		<h2>+ to competitive</h2>
+		<p>Quick search could help to stand out on job test task and on job itself.</p>
+		<img class="place bottom down-img" src="../pictures/search/9.jpg" alt="">
+	</section>
+	<section class="slide">
+		<h2>+ to saving time</h2>
+		<p>The faster you search for the right information, the more you save the most valuable resource - time.</p>
+		<img class="place left bottom down-img" src="../pictures/search/10.jpg" alt="">
+		<img class="place bottom down-img" src="../pictures/search/10.jpg" alt="">
+		<img class="place right bottom down-img" src="../pictures/search/10.jpg" alt="">
+	</section>
+	<section class="slide">
+		<h2>+ to perspective</h2>
+		<p>It is always effective to look at the task from different points of view. Multiple professionals will always find all the problems and ways to solve them faster than one.</p>
+		<img class="place bottom down-img" src="../pictures/search/11.jpg" alt="">
+	</section>
+	<section class="slide">
+		<h2>Always be critical</h2>
+		<p>Critical - does not mean don't believe anyone. It means check everything in practice. And compare different sources.</p>
+		<img class="place bottom down-img" src="../pictures/search/12.jpg" alt="">
+	</section>
+	<section class="slide slide-13">
+		<h2 class="">&#167;2 What sites you can trust and what sites you shouldn't</h2>
+		<img class="cover" src="../pictures/search/13.jpg" alt="">
+	</section>
+	<section class="slide">
+		<h2>The first doesn't mean the best</h2>
+		<p>Sites can break into the first search results due to SEO or their age.</p>
+		<img class="place bottom down-img" src="../pictures/search/14.jpg" alt="">
+	</section>
+	<section class="slide">
+		<h2>What does obsolete information mean?</h2>
+		<p>In frontend everything changes very quickly. Before 2014-2015 - most likely outdated.</p>
+		<img class="place bottom down-img" src="../pictures/search/15.jpg" alt="">
+	</section>
+	<section class="slide slide-16">
+		<h2>Trusted and untrusted sites</h2>
+		<p>This is a relative division. Some sites may fall into different categories. This is also a subjective opinion of the author, but it is based on specific observations.</p>
+	</section>
+	<section class="slide slide-17">
+		<div class="wrap">
+			<h2>Unreliable</h2>
+			<ul>
+				<li><a href="https://www.w3schools.com/html/html_blocks.asp">w3schools.com</a></li>
+				<li><a href="https://www.delftstack.com/">delftstack</a></li>
+				<li><a href="https://www.geeksforgeeks.org">geeksforgeeks</a></li>
+				<li><a href="https://blog.hubspot.com/website/what-is-css-class8606">Non-core sites</a></li>
+				<li>SEO sites</li>
+			</ul>
+		</div>
+	</section>
+	<section class="slide web2">
+		<h2>Different reliability</h2>
+	</section>
+	<section class="slide wiki">
+		<h2>Wikipedia</h2>
+		<p>Good for finding knowledge in which there is not much room for opinions. For example for finding out when different versions of the programming language came out.</p>
+		<ul>
+			<li><a href="https://en.wikipedia.org/wiki/ECMAScript#Versions">JavaScript Versions</a></li>
+			<li><a href="https://en.wikipedia.org/wiki/Comparison_of_browser_engines">Comparison of browser engines</a></li>
+			<li><a href="https://en.wikipedia.org/wiki/DNS">DNS</a></li>
+			<li><a href="https://en.wikipedia.org/wiki/RGB_color_model">RGB Color Model</a></li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>Blogs and websites</h2>
+		<p>If you find something useful, then add it to bookmarks or RSS.</p>
+		<ul>
+			<li><a href="https://gedd.ski/post/the-difference-between-width-and-flex-basis/">geddski about the difference between width and flex-basis</a></li>
+			<li><a href="https://ishadeed.com/article/auto-css/">How auto value works</a></li>
+			<li><a href="https://www.chenhuijing.com/blog/flexbox-and-absolute-positioning/">Flexbox and absolute positioning</a></li>
+			<li><a href="https://alistapart.com/article/fixing-variable-scope-issues-with-ecmascript-6/">List Apart about scope in JS</a></li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>RSS</h2>
+		<p>Many sites allow you to read all updates through RSS. With it you can consume new info from multiple sites in one place.</p>
+		<p>Online RSS readers:</p>
+		<ul>
+			<li><a href="https://www.inoreader.com/">inoreader</a></li>
+			<li><a href="https://theoldreader.com/">theoldreader</a></li>
+			<li><a href="https://feedly.com/">feedly</a></li>
+		</ul>
+	</section>
+	<section class="slide social">
+		<h2>Social networks</h2>
+		<p>Subscribe to your topic in different social networks that you actively use.</p>
+		<ul>
+			<li>Frontend News on Twitter by <a href="https://twitter.com/FrontendDaily">FrontendDaily</a>,<br> <a href="https://twitter.com/CSSWeekly">CSSWeekly</a> and <a href="https://twitter.com/WebToolsWeekly">WebToolsWeekly</a></li>
+			<li><a href="https://dev.to/">DEV.to community</a></li>
+		</ul>
+	</section>
+	<section class="slide social">
+		<h2><a href="https://www.reddit.com/">Reddit</a></h2>
+		<p>The most popular collective blog on web. Mostly consists of links, shorts posts questions and discussions.</p>
+		<ul>
+			<li><a href="https://www.reddit.com/r/Frontend/">r/Frontend</a></li>
+			<li><a href="https://www.reddit.com/r/webdev/">r/webdev</a></li>
+			<li><a href="https://www.reddit.com/r/javascript/">r/javascript</a></li>
+		</ul>
+	</section>
+	<section class="slide social">
+		<h2><a href="https://medium.com/">medium.com</a> and <a href="https://www.freecodecamp.org/">freecodecamp</a></h2>
+		<p>Popular collective blogs with articles.</p>
+		<ul>
+			<li><a href="https://blog.bitsrc.io/">Bits and Pieces</a></li>
+			<li><a href="https://medium.com/webbdev">levelup</a></li>
+			<li><a href="https://medium.com/javascript-in-plain-english">JavaScript</a></li>
+		</ul>
+		<ul>
+			<li><a href="https://www.freecodecamp.org/news/an-animated-guide-to-flexbox-d280cf6afc35/">Flexbox GIFs</a></li>
+			<li><a href="https://www.freecodecamp.org/news/understanding-flexbox-everything-you-need-to-know-b4013d4dc9af/">The Great Flexbox Guide</a></li>
+			<li><a href="https://www.freecodecamp.org/news/how-to-make-your-html-responsive-by-adding-a-single-line-of-css-2a62de81e431/">Quick Guide to Responsive Grids</a></li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>News and Digests</h2>
+		<ul>
+			<li><a href="https://frontendfront.com/">frontendfront</a></li>
+			<li><a href="https://frontendweekly.co/">frontendweekly</a></li>
+		</ul>
+		<p>You can google topic + "news" like "frontend news".</p>
+	</section>
+	<section class="slide faq">
+		<h2>Questions and Answers</h2>
+		<h3><a href="https://stackoverflow.com/">stackoverflow</a><br> and other <a href="https://stackexchange.com/sites#">stackexchange</a> sites.</h3>
+		<ul>
+			<li><a href="https://stackoverflow.com/questions/651038/how-do-you-clone-a-git-repository-into-a-specific-folder">How to clone a repo to a specific folder</a></li>
+			<li><a href="https://stackoverflow.com/questions/41033245/does-position-absolute-conflict-with-flexbox">Does absolute positioning and flexbox conflict</a></li>
+			<li><a href="https://stackoverflow.com/questions/43340690/is-there-an-online-emulating-screen-reader-tool-to-test-against-a-custom-web-pag">List of readers here</a></li>
+		</ul>
+		<p>You can often get to these sites from the search results.</p>
+	</section>
+	<section class="slide good">
+		<h2>Reliable</h2>
+		<ul>
+			<li><a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/constructing-the-object-model">developers.google.com</a></li>
+			<li><a href="https://web.dev/">web.dev</a></li>
+			<li><a href="https://developer.mozilla.org/">MDN</a></li>
+			<li><a href="https://javascript.info/">javascript.info</a></li>
+			<li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">css-tricks.com</a></li>
+			<li><a href="https://smashingmagazine.com/">smashingmagazine.com</a></li>
+		</ul>
+	</section>
+	<section class="slide specs">
+		<h2>Specs</h2>
+		<ul>
+			<li><a href="https://html.spec.whatwg.org/multipage/">HTML</a></li>
+			<li><a href="https://www.w3.org/TR/CSS/">CSS</a></li>
+		</ul>
+		<aside class="place right specs-aside">
+			<a href="https://caninclude.glitch.me/">Can I include one html element into another</a>
+		</aside>
+		<div class="dashed-line"></div>
+	</section>
+	<section class="slide methods">
+		<h2>&#167;3 Information search methods</h2>
+	</section>
+	<section class="slide">
+		<h2>When these links are not enough</h2>
+		<p><strong>Ask questions yourself!</strong></p>
+		<p>Don't be afraid to ask a question yourself on one of the websites created for this purpose. As well as ask your teachers and colleagues.</p>	
+		<p>Asking questions is also a skill. Provide all the necessary information and formulate it to avoid misunderstanding. Remember: <strong class="">people can't read mind</strong>:)</p>
+	</section>
+	<section class="slide sugg">
+		<h2>Look for things that real people might writeи</h2>
+		<p>Don't give up if you didn't find the answer right away! Try changing the request. Ask clarifying questions to yourself.</p>
+	</section>
+	<section class="slide aim">
+		<h2>The more precise the query, the fewer results. But the easier it is to filter them</h2>
+		<img class="place center" src="../pictures/search/aim.gif" alt="">
+	</section>
+	<section class="slide expert">
+		<h2>The ability to distinguish a normal source from a dubious one only comes with experience</h2>
+		Things worth paying attention to:
+		<ul>
+			<li>Dates of publications (but don't trust them blindly, site authors can change them)</li>
+			<li class="next">Too many value judgments and emotions</li>
+			<li class="next">Something that contradicts reliable sources</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>Search in all available formats</h2>
+		<ul>
+			<li>Text</li>
+			<li class="next">Images</li>
+			<li class="next">Video (conferences)
+			</li>
+			<li class="next">Audio (podcasts)</li>
+		</ul>
+	</section>
+	<section class="slide fast">
+		<h2>&#167;4<br> How<br> to<br> save<br> a little<br> more<br> time</h2>
+	</section>
+	<section class="slide">
+		<h2>Search engines and site search</h2>
+		<p>You can add search engines to your browser to save even more time. This works not only for big search engines, but also for different sites  with in-house search. For example: mdn, wikipedia, wiktionary, google translator.</p>
+	</section>
+	<section class="slide">
+		<h2>Site search via Google</h2>
+		<p>If there is no normal search on the site, you can replace it with Google. Just google "query site:site_address". For example "font-style site:https://en.bem.info". But it will search for words separately. To make it search for words together, use one of the basic tricks - wrap the words in quotes "font-style".</p>
+	</section>
+	<section class="slide">
+		<h2>Search engines features</h2>
+		<p>In Google search and other search engines, you can use so-called operators - special characters that refine the query. The main Google operators can be found in the <a href="https://support.google.com/websearch/answer/2466433?hl=en">official documentation</a>.</p>
+		<p>There are others besides those listed. For example, the character "*" can be used as "wild card". That is, instead of an asterisk, there can be any word. For example, a query in quotation marks "we * house" might return "we bought a house" and "we see a house".</p>
+	</section>
+	<section class="slide gone">
+		<h2>If it's on the web, it might disappear</h2>
+		<ul>
+			<li><a href="http://webcache.googleusercontent.com/search?q=cache:">Google Cache (after the colon you need to put the address of the missing page</a></li>
+			<li><a href="https://web.archive.org/">Largest web archive</a></li>
+		</ul>
+	</section>
+	<section class="slide gone">
+		<h2>Knowledge base</h2>
+		<p>ave knowledge locally in a knowledge base. To create it, you can use note-taking applications, CMS, or special programs. You can try <a href="https://joplinapp.org/">Joplin</a> and save pages extensions for (<a href="https://chrome.google.com/webstore/detail/joplin-web-clipper/alofnhikmmkdbbbgpnglcpdollgjjfek?hl=ru">chrome</a>, <a href="https://addons.mozilla.org/ru/firefox/addon/joplin-web-clipper/">firefox</a>).</p>
+	</section>
+	<section class="slide finish">
+		<h2>That's it!</h2>
+		<h3>Homework for the rest of your life is</h3>
+		<p>Use these principles every day in your studies and work. Always ask questions, look for answers, new sources, and be critical of everything.</p>
+	</section>
+	<section class="slide finish">
+		<h2>Good luck!</h2>
+		<p class="shout">And now it's time to ask questions!</p>
+	</section>
+	<section class="slide">
+		<h2>Images used in presentation:</h2>
+		<ul class="attribution">
+			<li><a href="https://www.freepik.com/free-photos-vectors/technology">Technology vector created by freepik - www.freepik.com</a></li>
+			<li><a href="https://www.freepik.com/free-photos-vectors/business">Business vector created by pikisuperstar - www.freepik.com</a></li>
+			<li><a href="https://www.freepik.com/free-photos-vectors/party">Party vector created by freepik - www.freepik.com</a></li>
+			<li><a href="https://www.freepik.com/free-photos-vectors/man">Man vector created by dooder - www.freepik.com</a></li>
+			<li><a href="https://www.freepik.com/free-photos-vectors/background">Background vector created by rawpixel.com - www.freepik.com</a></li>
+			<li><a href="https://www.freepik.com/free-photos-vectors/people">People vector created by pikisuperstar - www.freepik.com</a></li>
+			<li><a href="https://www.freepik.com/free-photos-vectors/background">Background vector created by freepik - www.freepik.com</a></li>
+			<li><a href="https://www.freepik.com/free-photos-vectors/background">Background vector created by vectorpouch - www.freepik.com</a></li>
+			<li><a href="https://www.freepik.com/free-photos-vectors/gold">Gold vector created by vectorpocket - www.freepik.com</a></li>
+			<li><a href="https://www.freepik.com/free-photos-vectors/business">Business vector created by macrovector - www.freepik.com</a></li>
+			<li><a href="https://commons.wikimedia.org/wiki/Category:29_Janus_und_Bellona,_statue,_Great_Parterre,_Sch%C3%B6nbrunn#/media/File:N29_Janus_und_Bellona,_Sch%C3%B6nbrunn_(03).jpg">Processed photo from Wikipedia under license <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></li>
+			<li>Victor Vasnetsov's paintings "The Knight at the Crossroads" and "Koschei the Immortal"</li>
+			<li>and memes from Internet:)</li>
+		</ul>
+	</section>
+	<footer class="badge">
+		<a href="https://github.com/shower/shower">Fork me on GitHub</a>
+	</footer>
+	<div class="progress"></div>
+	<script src="../shower/shower.min.js"></script>
+</body>
+</html>
