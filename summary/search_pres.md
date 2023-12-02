@@ -183,7 +183,6 @@ Html5css.ru, quaru.site (сейчас закрыт), coderoad.ru и многие
 ##### Дайджесты и подборки материалов
 
 * [Подкаст Веб-стандарты](https://www.youtube.com/user/wstdays)
-* [Небольшой дайджест на русском](https://digest.evrone.ru/frontend)
 * [Frontend Focus](https://frontendfoc.us/latest)
 * [Фронтенд — это не больно!](https://bespoyasov.ru/front-not-pain/)
 
@@ -204,13 +203,21 @@ quora.com (не путать с qaru.site)
 
 #### Надежные
 
+##### [MDN](https://developer.mozilla.org/)
+
+Один из самых популярных в наше время справочников по веб-разработке. Изначально делался Мозиллой, теперь многими другими. Много авторов, но качественный контент. Есть материалы с нуля о фронтенде и не только. Есть перевод, но неполный и не всегда высокого качества.
+
 ##### [Дока](https://doka.guide/)
 
 Документация для разработчиков на понятном языке.
 
-##### [css-live.ru](https://css-live.ru/)
+##### [javascript.info](https://javascript.info/) 
 
-Хорошие переводы.
+Отличный учебник по JS. Популярная русская версия [learn.javascript.ru](https://learn.javascript.ru/) не всегда актуальная.
+
+##### [web.dev](https://web.dev/)
+
+Новый сайт от гугл с материалами про веб-разработку.
 
 ##### [css-tricks.com](https://css-tricks.com/)
 
@@ -223,18 +230,6 @@ quora.com (не путать с qaru.site)
 ##### [developers.google.com](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/constructing-the-object-model)
 
 Справочные материалы от гугл. Много полезного про рендеринг страниц, DOM, производительность и т.п.
-
-##### [web.dev](https://web.dev/)
-
-Новый сайт от гугл с материалами про веб-разработку.
-
-##### [MDN](https://developer.mozilla.org/)
-
-Один из самых популярных в наше время справочников по веб-разработке. Изначально делался Мозиллой, теперь многими другими. Много авторов, но качественный контент. Есть материалы с нуля о фронтенде и не только. Есть перевод, но неполный и не всегда высокого качества.
-
-##### [javascript.info](https://javascript.info/) 
-
-Отличный учебник по JS. Популярная русская версия [learn.javascript.ru](https://learn.javascript.ru/) не всегда актуальная.
 
 ##### [WHATWG](https://html.spec.whatwg.org/multipage/)
 
