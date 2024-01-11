@@ -90,7 +90,7 @@ Outdated data.
 
 ##### SEO sites
 
-There are many low-quality sites on the web created for SEO, copying someone else's content.
+There are many low-quality sites on the web created for SEO, copying someone else's content or "AI" generated.
 
 ##### Non-core sites
 
@@ -102,7 +102,7 @@ This category mainly includes sites with content created by users. The quality o
 
 ##### Wikipedia
 
-Good for finding knowledge in which there is not much room for opinions. For example, there it is good for finding out when different versions of the programming language came out.
+Good for finding knowledge in which there is not much room for opinions. For example, it is good for finding out when different versions of the programming language came out.
 
 Example of useful articles:
 * [JavaScript Versions](https://en.wikipedia.org/wiki/ECMAScript#Versions)
