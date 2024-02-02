@@ -117,7 +117,7 @@ Html5css.ru, coderoad.ru и многие другие.
 Хороша для поиска знаний, в которых особо нет места мнениям. Например, там вполне можно узнать, когда выходили разные версии языка программирования. 
 
 Пример полезных статей:
-* [Версии JavaScript](https://en.wikipedia.org/wiki/ECMAScript#Versions)
+* [Версии JavaScript](https://en.wikipedia.org/wiki/ECMAScript_version_history)
 * [Сравнение браузерный движков](https://en.wikipedia.org/wiki/Comparison_of_browser_engines)
 * [DNS](https://ru.wikipedia.org/wiki/DNS)
 * [Прокси серверы](https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%BE%D0%BA%D1%81%D0%B8-%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80)
