@@ -144,7 +144,6 @@ Html5css.ru, coderoad.ru и многие другие.
 Есть группы разных компаний и сообщества на тему. 
 
 Примеры сообществ:
-* [forwebdev](https://vk.com/forwebdev)
 * [love_frontend](https://vk.com/love_frontend)
 
 ##### [dev.to](https://dev.to/)
