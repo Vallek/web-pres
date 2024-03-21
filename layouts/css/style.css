@@ -4,6 +4,7 @@ body {
 	/* display: flex;
 	flex-direction: column;
 	min-height: 100vh; */
+	height: 100%;
 }
 
 html {
@@ -189,14 +190,16 @@ h1 {
 
 /* Grid Layout */
 .grid-wrapper {
+	box-sizing: border-box;
 	border: 20px solid rgb(240, 219, 126);
 	display: grid;
 	grid-template-columns: 200px 500px 200px;
 	/* grid-template-columns: 1fr 1fr 1fr; */
-	grid-template-rows: 100px 500px 100px;
+	grid-template-rows: auto 1fr auto;
 	grid-gap: 10px;
 	background-color: rgb(240, 219, 126);
 	justify-content: safe center;
+	min-height: 100%;
 }
 
 .grid-item {
