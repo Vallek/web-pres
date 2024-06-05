@@ -22,7 +22,7 @@
 	content: "•"; 
 	color: rgb(255, 255, 255);
 	display: inline-block; width: 1em;
-	margin-left: -1em
+	margin-left: -1em;
 }
 
 .site-heading {

@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css">
+	<link rel="stylesheet" href="css/nav.css">
 	<style>
 		.shower {
 			--slide-ratio: calc(16 / 9);
@@ -96,11 +97,18 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
+		}
+		.slide-17::after {
+			content: '';
+			position: absolute;
+			display: block;
+			width: 100%;
+			height: 100%;
 			background-image: url('pictures/search/17.jpg');
 			background-size: cover;
-		}
-		.slide-17 > .wrap {
-			margin: 110px 0 0 75px;
+			top: -60px;
+			opacity: 0.6;
+			z-index: -1;
 		}
 		.wiki {
 			background-image: url('pictures/search/wiki.png');
@@ -575,6 +583,12 @@
 		<a href="https://github.com/shower/shower">Fork me on GitHub</a>
 	</footer>
 	<div class="progress"></div>
+	<div class="nav">
+		<button class="nav__btn nav__btn_back" type="button" aria-label="Предыдущий слайд (стрелка влево)" title="Предыдущий слайд (стрелка влево)">🔙</button>
+		<button class="nav__btn nav__btn_all" type="button" aria-label="Все слайды (Esc)" title="Все слайды (Esc)">🔝</button>
+		<button class="nav__btn nav__btn_forward" type="button" aria-label="Следующий слайд (стрелка вправо)" title="Следующий слайд (стрелка вправо)">⏭️</button>
+	</div>
 	<script src="shower/shower.min.js"></script>
+	<script src="js/nav.js"></script>
 </body>
 </html>

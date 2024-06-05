@@ -1,0 +1,31 @@
+.nav {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5em;
+	margin: 0.6em;
+	margin-bottom: 0.4em;
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	transform: translateX(-50%);
+	opacity: 0.7;
+}
+
+.nav:hover {
+	opacity: 1;
+}
+
+.shower.list .nav {
+  display: none;
+}
+
+.shower.full .nav {
+  display: flex;
+}
+
+.nav__btn {
+	padding: 0.4em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
