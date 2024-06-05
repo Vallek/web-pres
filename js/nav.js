@@ -22,7 +22,7 @@ navForward.addEventListener('click', (el) => {
 });
 
 const allEvent = new KeyboardEvent("keydown", {
-  key: "Esc",
+  key: "Escape",
   keyCode: 27,
   which: 27
 });
