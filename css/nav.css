@@ -1,31 +1,42 @@
-.nav {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 0.5em;
-	margin: 0.6em;
-	margin-bottom: 0.4em;
+vallek-shower-nav {
 	position: absolute;
 	left: 50%;
 	bottom: 0;
 	transform: translateX(-50%);
-	opacity: 0.7;
 }
 
-.nav:hover {
-	opacity: 1;
-}
-
-.shower.list .nav {
+.shower.list vallek-shower-nav {
   display: none;
 }
 
-.shower.full .nav {
+.shower.full vallek-shower-nav {
   display: flex;
 }
 
-.nav__btn {
-	padding: 0.4em;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.shower.nav_bottom-right vallek-shower-nav {
+	left: initial;
+	right: 0;
+	bottom: 0;
+	transform: initial;
+}
+
+.shower.nav_bottom-left vallek-shower-nav {
+	left: 0;
+	bottom: 0;
+	transform: initial;
+}
+
+.shower.nav_top-right vallek-shower-nav {
+	right: 0;
+	left: initial;
+	top: 0;
+	bottom: initial;
+	transform: initial;
+}
+
+.shower.nav_top-left vallek-shower-nav {
+	left: 0;
+	top: 0;
+	bottom: initial;
+	transform: initial;
 }
