@@ -159,19 +159,14 @@ Html5css.ru, coderoad.ru и многие другие.
 * [JS](https://habr.com/ru/hub/javascript/)
 * [webdev](https://habr.com/ru/hub/webdev/)
 
-##### medium.com
+##### freecodecamp
 
-Популярный коллективный блог на английском. Более разрозненный и менее социальный, чем хабр. Много отличных статьей про верстку и веб-разработку. Есть сообщества, публикующие статьи разных авторов по темам. Сообщество freecodecamp раньше было частью медиума, а теперь их статьи на [отдельном сайте](https://www.freecodecamp.org/news/). Также есть переводы разного качества.
+Коллективный блог по веб-разработке.
 
 Пример полезных постов:
 * [Флексбокс в гифках](https://www.freecodecamp.org/news/an-animated-guide-to-flexbox-d280cf6afc35/)
 * [Большой гайд по флексу](https://www.freecodecamp.org/news/understanding-flexbox-everything-you-need-to-know-b4013d4dc9af/)
 * [Быстрый гайд по адаптивным гридам](https://www.freecodecamp.org/news/how-to-make-your-html-responsive-by-adding-a-single-line-of-css-2a62de81e431/)
-
-Пример сообществ:
-* [Дизайн собака](https://designpub.ru/)
-* [webbdev](https://medium.com/webbdev)
-* [codyhouse](https://medium.com/codyhouse)
 
 ##### reddit
 
