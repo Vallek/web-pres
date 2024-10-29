@@ -124,8 +124,8 @@
 Всегда спрашивайте, что вы видите, в чем проблема, что может на это влиять. Вы удивитесь, как часто вы сами можете ответить на свой же вопрос.
 
 ### 19. Подскажут ошибки: 
-* Валидация
-* Девтулзы (предупреждения и перечеркивания у css свойств и значений)
+* [Валидация](https://validator.w3.org/nu/)
+* [Девтулзы](https://vallek.github.io/web-links/#qa) (предупреждения и перечеркивания у css свойств и значений)
 * Иногда встроенная валидация в vs code (но она ограничена)
 * [Линтеры](https://vallek.github.io/web-links/#linters) - расширения в vs code для поиска ошибок (есть для html, css и js)
-* Консоль браузера: ошибки ресурсов, ошибки JS при выполнении кода и другое
+* [Консоль](https://developer.chrome.com/docs/devtools/console?hl=ru) [браузера](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools): ошибки ресурсов, ошибки JS при выполнении кода и другое
