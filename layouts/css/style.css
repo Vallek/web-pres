@@ -37,6 +37,18 @@ h1 {
 	text-align: center;
 }
 
+nav > a {
+	text-decoration: none;
+}
+
+nav > a:hover {
+	text-decoration: underline;
+}
+
+.active-page {
+	text-decoration: underline;
+}
+
 .table-sidebar {
 	text-align: center;
 	width: 100px;
